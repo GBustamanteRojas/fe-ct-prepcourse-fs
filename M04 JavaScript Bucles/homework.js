@@ -19,10 +19,12 @@ function mayoriaDeEdad(edad) {
    // Caso contrario: "Not allowed".
    // Tu código:
    if (edad >= 18) {
-      return "Allowed"
-   }else {
-      return "Not allowed";
+      return "Allowed";
+   } else {
+      return "Not allowed"
    }
+      
+   
 }
 
 function conection(status) {
@@ -104,7 +106,7 @@ function estaEnRango(num) {
    if (num <50 && num >20){
       return true;
    } else {
-      return false;n
+      return false;
    }
 }
 
@@ -142,19 +144,23 @@ function operadoresLogicos(num1, num2, num3) {
    // Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
    // Si todos los argumentos son cero, retornar ---> "Error".
    // Si no se cumple ninguna de las condiciones anteriores, retornar false.
-   // Tu código:
-   if (num1 === 0 && num2 === 0 && num3 === 0){
-      return "Error";
-   } else if(num1 < 0 || num2 < 0 || num3 <0){
-      return "Hay negativos";
-   } else if(num1 > num2 || num1 > num3){
-      return  "Numero 1 es mayor y positivo";
-   } else if(num3 > num1 || num3 > num2){
-      return num3 + 1;
-   } else{
-      return false;
+   // Tu código:{
+      if (num1 === 0 && num2 === 0 && num3 === 0) {
+         return "Error";
+      } else if (num1 < 0 && num2 < 0 && num3 < 0) {
+         return "Hay negativos";
+      } else if (num1 > num2 && num1 > num3){
+         return "Numero 1 es mayor y positivo";
+      } else if (num3 > num1 && num3 > num2){
+         return num3 + 1;
+      } else {
+         return false;
+      }
    }
-}
+
+   
+   
+
 
 function esPrimo(num) {
    // Retornar true si "num" es primo.
@@ -162,27 +168,54 @@ function esPrimo(num) {
    // [Pista 1]: un número primo sólo es divisible por sí mismo y por 1.
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
-   // Tu código:
+   // Tu código:{
+      var numEsprimo;
+      for (i=0; i < num; i++){
+         if (num % i === 0){
+            numEsprimo = false
+            break;
+         } else {
+            numEsprimo = true
+         }
+      }
+   }  
    
-}
+    
+
 
 function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
    // Caso contrario, retornar "Soy falso".
    // Tu código:
+   if(valor === true) return  "Soy verdadero"
+   return "Soy falso"
 }
 
-function tieneTresDigitos(num) {
+function tieneTresDigitos(num) 
    // Si el número recibido tiene tres dígitos retornar true.
    // Caso contrario, retornar false.
    // Tu código:
-}
+      
+   if (num >= 100 && num <= 999){
+      return true;      
+   } else {
+      return false;
+   }
+      
+
 
 function doWhile(num) {
    // Implementar una función que aumente el valor recibido en 5 hasta un límite de 8 veces.
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
+   var i= 0
+   var valorFinal = num;
+   do {
+      i++
+      valorFinal = valorFinal + 5;      
+   } while (i < 8);
+   return valorFinal;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
